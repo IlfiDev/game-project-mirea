@@ -4,8 +4,8 @@ public class Player extends Mob implements MeleeAttackable, MagicAttackable, Tar
     private int lvl;
     private float physicalResistance = 0.5F;
     private float magicResistance = 1;
-    public Player(String name,int lvl, int hp){
-        super(name, hp);
+    public Player(String name,int lvl, int hp, int ap){
+        super(name, hp, ap);
         this.lvl = lvl;
 
 
@@ -27,17 +27,25 @@ public class Player extends Mob implements MeleeAttackable, MagicAttackable, Tar
     }
 
     @Override
+    public void heal(int amountOfHealt) {
+
+    }
+
+
+    @Override
     public void magicAttack(Targetable target) {
-        target.takeMagicDamage(15);
+        target.takeMagicDamage(10);
+
     }
 
     @Override
     public void meleeAttack(Targetable target) {
-       target.takeMeleeDamage(10);
+        target.takeMeleeDamage(10);
+
     }
 
     @Override
-    public void doCriticaldamage(int attackDmg) {
+    public void doCriticalDamage(int attackDmg) {
 
     }
 }

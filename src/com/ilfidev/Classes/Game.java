@@ -8,7 +8,7 @@ public class Game {
 
     public Game(Player pl){
         ent1 = pl;
-        ent2 = new Monster("Spider", 50);
+        ent2 = new Monster("Spider", 50, 20);
     }
     public void startGame(){
         while(ent1.getHealthPoints() > 0 && ent2.getHealthPoints() > 0){

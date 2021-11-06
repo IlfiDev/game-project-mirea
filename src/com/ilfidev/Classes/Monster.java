@@ -6,8 +6,8 @@ public class Monster extends Mob implements MeleeAttackable, Targetable {
     private float magicResistance = 1;
 
 
-    public Monster(String name, int hp) {
-        super(name, hp);
+    public Monster(String name, int hp, int ap) {
+        super(name, hp, ap);
     }
 
     @Override
@@ -26,14 +26,17 @@ public class Monster extends Mob implements MeleeAttackable, Targetable {
     }
 
     @Override
+    public void heal(int amountOfHealt) {
+
+    }
+
+    @Override
     public void meleeAttack(Targetable target) {
         target.takeMeleeDamage(10);
     }
 
     @Override
-    public void doCriticaldamage(int attackDmg) {
+    public void doCriticalDamage(int attackDmg) {
 
     }
-
-
 }
