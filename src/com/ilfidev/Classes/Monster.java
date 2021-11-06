@@ -29,4 +29,11 @@ public class Monster extends Mob implements MeleeAttackable, Targetable {
     public void meleeAttack(Targetable target) {
         target.takeMeleeDamage(10);
     }
+
+    @Override
+    public void doCriticaldamage(int attackDmg) {
+
+    }
+
+
 }

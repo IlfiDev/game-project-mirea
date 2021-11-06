@@ -35,4 +35,9 @@ public class Player extends Mob implements MeleeAttackable, MagicAttackable, Tar
     public void meleeAttack(Targetable target) {
        target.takeMeleeDamage(10);
     }
+
+    @Override
+    public void doCriticaldamage(int attackDmg) {
+
+    }
 }
